@@ -33,8 +33,11 @@ function jsQuiz() {
 jsQuiz();
 function add(text) {
   let question = document.createElement("h3");
-
-  let qustionText = document.createTextNode(text["question"]);
+  let countQue=currQues+1
+  let qustionText = document.createTextNode(
+  
+    `Question.${[countQue]}`+":"+" " + text["question"]
+  );
   question.appendChild(qustionText);
   answer.appendChild(question);
   for (let i = 1; i <= 4; i++) {

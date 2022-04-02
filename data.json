@@ -1,6 +1,14 @@
 [
+ 
   {
-    "question": "A pad costs 33 cents. How much will 5 pads cost?",
+    "question": " dentify the next number in the series:1, 1, 2, 3, 5, 8, _____",
+    "answer_1": "20",
+    "answer_2": "13",
+    "answer_3": "9",
+    "answer_4": "10",
+    "correct": "b : 13"
+  }, {
+    "question": "   A pad costs 33 cents. How much will 5 pads cost?",
     "answer_1": " $2.28",
     "answer_2": " $1.45",
     "answer_3": " $1.10",
@@ -8,15 +16,7 @@
     "correct": "a : $2.28"
   },
   {
-    "question": "Identify the next number in the series:1, 1, 2, 3, 5, 8, _____",
-    "answer_1": "20",
-    "answer_2": "13",
-    "answer_3": "9",
-    "answer_4": "10",
-    "correct": "b : 13"
-  },
-  {
-    "question": "What is the square root of 8?",
+    "question": "  What is the square root of 8?",
     "answer_1": "16",
     "answer_2": "4.466",
     "answer_3": "3.56",
@@ -32,7 +32,7 @@
     "correct": "c : 1.44"
   },
   {
-    "question": "Kevin is 21 years old and his sister is a third his age. When Kevin is 36, what will be the age of his sister?",
+    "question": " Kevin is 21 years old and his sister is a third his age. When Kevin is 36, what will be the age of his sister?",
     "answer_1": "36",
     "answer_2": "24",
     "answer_3": "28",
@@ -40,7 +40,7 @@
     "correct": "d : 22"
   },
   {
-    "question": "He's still sleeping, ________",
+    "question": " He's still sleeping, ________",
     "answer_1": "do he?",
     "answer_2": "isn't he?",
     "answer_3": " wasn't he?",
@@ -48,7 +48,7 @@
     "correct": " b :isn't he? "
   },
   {
-    "question": "Yesterday, we ______ a very interesting conference call about the new ERP project. ",
+    "question": " Yesterday, we ______ a very interesting conference call about the new ERP project. ",
     "answer_1": "are having ",
     "answer_2": "have",
     "answer_3": "had",
@@ -56,7 +56,7 @@
     "correct": " c : had"
   },
   {
-    "question": "The plane _____ at New York's Kennedy Airport. ",
+    "question": " The plane _____ at New York's Kennedy Airport. ",
     "answer_1": "Took off",
     "answer_2": "Took down",
     "answer_3": "landed",
@@ -64,7 +64,7 @@
     "correct": "c : landed"
   },
   {
-    "question": "Compound Nouns: Thomas White, who orchestrated ___________ rescue packages, will address the group",
+    "question": " Compound Nouns: Thomas White, who orchestrated ___________ rescue packages, will address the group",
     "answer_1": "Multi billion-dollars",
     "answer_2": "Multi billions dollars",
     "answer_3": "Multi billion dollar",
@@ -72,7 +72,7 @@
     "correct": "d : Multi billion-dollar"
   },
   {
-    "question": "Prepositions: She always gets up early ______ the morning, so she can make it to class ______ time.",
+    "question": " Prepositions: She always gets up early ______ the morning, so she can make it to class ______ time.",
     "answer_1": "In ---- on",
     "answer_2": "On ---- on",
     "answer_3": "In ---- in",
@@ -87,21 +87,14 @@
     "answer_4": "<cols0pan>",
     "correct": " a : <td>"
   },
+
   {
-    "question": "If the background image is smaller than the screen, what will happen ?",
-    "answer_1": "",
-    "answer_2": "",
-    "answer_3": "",
-    "answer_4": "",
-    "correct": ""
-  },
-  {
-    "question": "A pad costs 33 cents. How much will 5 pads cost?",
-    "answer_1": "It will be streteched",
-    "answer_2": " It will be repeated",
-    "answer_3": "It will leave a blank space at the bottom of your page",
+    "question": "_______ attribute is used to specify where to open the linked document.",
+    "answer_1": "target",
+    "answer_2": " coords",
+    "answer_3": "rel",
     "answer_4": "None of the above",
-    "correct": " b : It will be repeated"
+    "correct": " a : target"
   },
   {
     "question": " The HTML tags are all",
