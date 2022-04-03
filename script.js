@@ -84,9 +84,5 @@ function check(correctAnswer, selected) {
 function finish() {
   next();
   sessionStorage.setItem("result", JSON.stringify(allResult));
-
-  // let x = JSON.parse(sessionStorage.getItem("result"));
-  // for (let i = 0; i < x.length; i++) {
-  //   console.log(x[i].question);
-  // }
+  window.location.href=''
 }
