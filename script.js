@@ -1,76 +1,63 @@
-
-let quiz = document.querySelector(".quiz");
-let answer = document.querySelector(".quiz");
-let btn = document.querySelector(".arrow");
-
-let questionsObject = [];
+let question = document.getElementById("question");
+let finishBtn = document.getElementById('finish')
+let allResult = []
 let currQues = 0;
+let isCheck = false;
 
 
-function jsQuiz() {
-  var httpRequest = new XMLHttpRequest();
-  httpRequest.onreadystatechange = function () {
-    if (httpRequest.readyState === 4) {
-      if (httpRequest.status === 200) {
-        let data = JSON.parse(httpRequest.responseText);
-          add(data[currQues]);
-          btn.onclick = function () {
-              let arrow = data[currQues].correct
-              currQues++
-            check(arrow)
-            
-              quiz.innerHTML = ''
-              answer.innerHTML = ''
-            add(data[currQues]); 
-                
-          }
-      }
+add(data[currQues]);
+
+
+function next() {
+  let radio = document.getElementsByTagName("input");
+  for (let i = 0; i < radio.length; i++) {
+    if (radio[i].checked == true) {
+      radio[i].checked = false;
+      let correctAnswer = data[currQues].correct; //Save the correct answer
+      currQues++;
+      check(correctAnswer, radio[i].defaultValue);
+      add(data[currQues]);
+
+      return;
     }
-  };
-  httpRequest.open("GET", "data.json");
-  httpRequest.send();
+  }
+  alert("please select an answer");
 }
-jsQuiz();
+
 function add(text) {
-  let question = document.createElement("h3");
-  let countQue=currQues+1
-  let qustionText = document.createTextNode(
-  
-    `Question.${[countQue]}`+":"+" " + text["question"]
-  );
-  question.appendChild(qustionText);
-  answer.appendChild(question);
+  let countQue = currQues + 1;
+  question.innerHTML = `Question.${[countQue]}` + ":" + " " + text["question"];
+  let input = document.getElementsByTagName("input");
   for (let i = 1; i <= 4; i++) {
-    let div = document.createElement("div");
-    div.className = "answer";
-    let radio = document.createElement("input");
-
-    radio.name = "question";
-    radio.type = "radio";
-    radio.id = `answer_${i}`;
-    radio.dataset.answer = text[`answer_${i}`];
-
-    let label = document.createElement("label");
-    label.htmlFor = `answer${i}`;
-
-    let labelText = document.createTextNode(text[`answer_${i}`]);
-    label.appendChild(labelText);
-    div.appendChild(radio);
-    div.appendChild(label);
-
-    answer.appendChild(div);
+    let label = document.getElementById(`answer${i}`);
+    input[i - 1].value = text[`answer_${i}`];
+    label.innerHTML = text[`answer_${i}`];
+  }
+  if (currQues==19) {
+    finishBtn.style.display = 'block'
   }
 }
-function check(check) {
-    let answers = document.getElementsByName('question')
-    let checkAnswer
-    for (let i = 0; i < answers.length; i++) {
-        if (answers[i].checked) {
-            checkAnswer = answers[i].dataset.answer
-        }
-    
-        
+function check(correctAnswer, selected) {
+  let result = {
+    question: "",
+    answer: "",
+    correct: "",
+    isTrue: false,
+  };
+  let answers = document.getElementsByName("answer");
+  
+  for (let i = 0; i < answers.length; i++) {  
+    if (correctAnswer == selected) {
+      result.isTrue = true;
     }
-    console.log(`right answer : ${check}`);
-    console.log(` choose answer : ${checkAnswer}`)
+    result.answer = selected
+    result.correct = correctAnswer
+    result.question=question.innerHTML
+  }
+  allResult.push(result);
+
+}
+
+function finish(){
+localStorage.setItem('result' , JSON.stringify(allResult))
 }

@@ -45,3 +45,13 @@ label {
 .arrow {
     width: 30px;
 }
+.timeline {
+    background-color: antiquewhite;
+    border-top: 1px solid black;
+}
+.timeline span{
+    border-radius: 50%;
+}
+#finish{
+    display: none;
+}
