@@ -1,13 +1,13 @@
 let question = document.getElementById("question");
-let finishBtn = document.getElementById('finish');
+let finishBtn = document.getElementById("finish");
 let nextQuestion = document.getElementById("next");
-let allResult = []
+let arrow = document.getElementsByTagName("img");
+let count = document.getElementById("count");
+let allResult = [];
 let currQues = 0;
 let isCheck = false;
 
-
 add(data[currQues]);
-
 
 function next() {
   let radio = document.getElementsByTagName("input");
@@ -27,17 +27,25 @@ function next() {
 
 function add(text) {
   let countQue = currQues + 1;
-  question.innerHTML = `Question.${[countQue]}` + ":" + " " + text["question"];
+  question.innerHTML = `Question${[countQue]}` + ":" + " " + text["question"];
+  count.innerHTML = "question :  " + " " + `${[countQue]}` + "/20";
   let input = document.getElementsByTagName("input");
   for (let i = 1; i <= 4; i++) {
     let label = document.getElementById(`answer${i}`);
     input[i - 1].value = text[`answer_${i}`];
     label.innerHTML = text[`answer_${i}`];
-    
   }
-  if (currQues==19) {
-    finishBtn.style.display = 'block'
-    nextQuestion.style.display='none'
+  if (currQues === 4) {
+    nextQuestion.innerHTML = "Next to IQ questions";
+  } else if (currQues === 8) {
+    nextQuestion.innerHTML = "Next to Technical questions";
+  } else {
+    nextQuestion.innerHTML = "Next ";
+  }
+ 
+  if (currQues == 19) {
+    finishBtn.style.display = "block";
+    nextQuestion.style.display = "none";
   }
 }
 function check(correctAnswer, selected) {
@@ -48,19 +56,18 @@ function check(correctAnswer, selected) {
     isTrue: false,
   };
   let answers = document.getElementsByName("answer");
-  
-  for (let i = 0; i < answers.length; i++) {  
+
+  for (let i = 0; i < answers.length; i++) {
     if (correctAnswer == selected) {
       result.isTrue = true;
     }
-    result.answer = selected
-    result.correct = correctAnswer
-    result.question=question.innerHTML
+    result.answer = selected;
+    result.correct = correctAnswer;
+    result.question = question.innerHTML;
   }
   allResult.push(result);
-
 }
 
-function finish(){
-localStorage.setItem('result' , JSON.stringify(allResult))
+function finish() {
+  localStorage.setItem("result", JSON.stringify(allResult));
 }

@@ -6,30 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-   <div class="container">
-    <div class="quiz">
+   
+  
+   <div class="container" data-aos="zoom-in">
+    <div class="quiz"> 
+         <div class="count">
+        <h4 id="count"></h4>
+       </div>
         <h3 id="question"></h3>
-        <div class="answer">
+        <div class="answer" >
             <input type="radio" name="answer" >
             <label for="answer" id="answer1" ></label>
-        </div>
+        </div><hr>
              <div class="answer">
             <input type="radio" name="answer">
             <label for="answer" id="answer2"></label>
         </div class="answer"> 
-          <div>
+          <div><hr>
             <input type="radio" name="answer" >
             <label for="" id="answer3"></label>
-        </div>
+        </div><hr>
           <div class="answer" >
             <input type="radio" name="answer">
             <label for="" id="answer4"></label>
-        </div>
+        </div><hr>
         
     </div>
-    <button onclick="next()" id="next"><img class="arrow" src="./image/arrow.png"></button> 
+    <button onclick="next()" id="next"></button> 
     <button onclick="finish()" id="finish">Finsh Exam</button>
    </div> 
        
@@ -38,6 +44,9 @@
    
    <script src="data.js"></script>
    <script src="script.js"></script>
-  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+</script>
 </body>
 </html>
