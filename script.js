@@ -33,6 +33,7 @@ function add(text) {
     let label = document.getElementById(`answer${i}`);
     input[i - 1].value = text[`answer_${i}`];
     label.innerHTML = text[`answer_${i}`];
+    
   }
   if (currQues==19) {
     finishBtn.style.display = 'block'

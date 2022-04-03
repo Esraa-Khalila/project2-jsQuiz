@@ -10,11 +10,11 @@ const data = [
   {
     question:
       " Yesterday, we ______ a very interesting conference call about the new ERP project. ",
-    answer_1: "are having ",
+    answer_1: "are having",
     answer_2: "have",
     answer_3: "had",
     answer_4: "were had",
-    correct: " c : had",
+    correct: "had",
   },
   {
     question: " The plane _____ at New York's Kennedy Airport. ",
@@ -22,7 +22,7 @@ const data = [
     answer_2: "Took down",
     answer_3: "landed",
     answer_4: "Drove",
-    correct: "c : landed",
+    correct: "landed",
   },
   {
     question:
@@ -31,7 +31,7 @@ const data = [
     answer_2: "Multi billions dollars",
     answer_3: "Multi billion dollar",
     answer_4: "Multi billion-dollar",
-    correct: "d : Multi billion-dollar",
+    correct: "Multi billion-dollar",
   },
   {
     question:
@@ -40,7 +40,7 @@ const data = [
     answer_2: "On ---- on",
     answer_3: "In ---- in",
     answer_4: "By ---- in",
-    correct: "a : In ---- on",
+    correct: "In ---- on",
   },
   {
     question: " dentify the next number in the series:1, 1, 2, 3, 5, 8, _____",
@@ -48,15 +48,15 @@ const data = [
     answer_2: "13",
     answer_3: "9",
     answer_4: "10",
-    correct: "b : 13",
+    correct: "13",
   },
   {
     question: "   A pad costs 33 cents. How much will 5 pads cost?",
-    answer_1: " $2.28",
-    answer_2: " $1.45",
-    answer_3: " $1.10",
+    answer_1: "$2.28",
+    answer_2: "$1.45",
+    answer_3: "$1.10",
     answer_4: "$5.5",
-    correct: "a : $2.28",
+    correct: "$2.28",
   },
   {
     question: "  What is the square root of 8?",
@@ -64,16 +64,16 @@ const data = [
     answer_2: "4.466",
     answer_3: "3.56",
     answer_4: "2.82",
-    correct: "d : 2:82",
+    correct: "2:82",
   },
   {
     question:
       "Identify the missing number in the series.0.18, 0.36, 0.72, _____, 2.88",
     answer_1: "1.62",
     answer_2: "0.9",
-    answer_3: " 1.44",
+    answer_3: "1.44",
     answer_4: "1.26",
-    correct: "c : 1.44",
+    correct: "1.44",
   },
   {
     question:
@@ -82,51 +82,51 @@ const data = [
     answer_2: "24",
     answer_3: "28",
     answer_4: "22",
-    correct: "d : 22",
+    correct: "22",
   },
   {
-    question: " Which tag is used to add columns to tables ?",
-    answer_1: "<td>",
-    answer_2: "<tr>",
-    answer_3: "<th>",
-    answer_4: "<cols0pan>",
-    correct: " a : <td>",
+    question: "Which HTML element defines the title of a document?",
+    answer_1: "title",
+    answer_2: "head",
+    answer_3: "meta",
+    answer_4: "html",
+    correct: "title",
   },
 
   {
     question:
       "_______ attribute is used to specify where to open the linked document.",
     answer_1: "target",
-    answer_2: " coords",
+    answer_2: "coords",
     answer_3: "rel",
     answer_4: "None of the above",
-    correct: " a : target",
+    correct: "target",
   },
   {
     question: " The HTML tags are all",
     answer_1: "In lower case",
     answer_2: "In upper case",
     answer_3: "Case sensitive",
-    answer_4: " Not case sensitive",
-    correct: " d :  Not case sensitive",
+    answer_4: "Not case sensitive",
+    correct: "Not case sensitive",
   },
   {
     question:
       "A _____ tag is used to specify that the browser is to fetch and use an external style sheet file",
-    answer_1: "<src>",
-    answer_2: "<sheet>",
-    answer_3: " <link>",
+    answer_1: "src",
+    answer_2: "sheet",
+    answer_3: "link",
     answer_4: "None of the above",
-    correct: " c : <link>",
+    correct: "link",
   },
   {
     question:
       "Which of the following property is used to set the background image of an element ?",
     answer_1: "background-repeat",
     answer_2: "background-position",
-    answer_3: " background-image",
+    answer_3: "background-image",
     answer_4: "background-color",
-    correct: " c : background-image",
+    correct: "background-image",
   },
   {
     question:
@@ -135,7 +135,7 @@ const data = [
     answer_2: "font",
     answer_3: "font-size",
     answer_4: "None of the above",
-    correct: " c : font-size",
+    correct: "font-size",
   },
   {
     question: " Local Browser used for validations on the Web Pages uses",
@@ -143,7 +143,7 @@ const data = [
     answer_2: "java",
     answer_3: "HTML",
     answer_4: "CSS",
-    correct: " a : js",
+    correct: "js",
   },
   {
     question: "JavaScript code can be called by using",
@@ -151,7 +151,7 @@ const data = [
     answer_2: "Preprocessor",
     answer_3: "Function / Method",
     answer_4: "None of the above",
-    correct: "c :Function / Method",
+    correct: "Function / Method",
   },
   {
     question:
@@ -159,8 +159,8 @@ const data = [
     answer_1: "link",
     answer_2: "script",
     answer_3: "ext",
-    answer_4: " src",
-    correct: "d : src",
+    answer_4: "src",
+    correct: "src",
   },
   {
     question: "Which was the first browser to support JavaScript ?",
@@ -168,6 +168,6 @@ const data = [
     answer_2: "Netscape",
     answer_3: "Mozilla Firefox",
     answer_4: "IE",
-    correct: " b :Netscape",
+    correct: "Netscape",
   },
 ];
