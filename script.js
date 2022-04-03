@@ -1,7 +1,6 @@
 let question = document.getElementById("question");
 let finishBtn = document.getElementById("finish");
 let nextQuestion = document.getElementById("next");
-let arrow = document.getElementsByTagName("img");
 let count = document.getElementById("count");
 let allResult = [];
 let currQues = 0;
@@ -22,7 +21,11 @@ function next() {
       return;
     }
   }
-  alert("please select an answer");
+  Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "Please select an answer!",
+  });
 }
 
 function add(text) {
@@ -40,9 +43,8 @@ function add(text) {
   } else if (currQues === 8) {
     nextQuestion.innerHTML = "Next to Technical questions";
   } else {
-    nextQuestion.innerHTML = "Next ";
+    nextQuestion.innerHTML = "Next";
   }
- 
   if (currQues == 19) {
     finishBtn.style.display = "block";
     nextQuestion.style.display = "none";
@@ -69,5 +71,11 @@ function check(correctAnswer, selected) {
 }
 
 function finish() {
+  next();
   localStorage.setItem("result", JSON.stringify(allResult));
+
+  let x = JSON.parse(localStorage.getItem("result"));
+  for (let i = 0; i < x.length; i++) {
+    console.log(x[i].question);
+  }
 }

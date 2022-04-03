@@ -6,14 +6,12 @@
 body {
   height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(-45deg, white, #9abae1, #0f044c);
+  background: linear-gradient(-45deg, #9abae1, #0f044c);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 @keyframes gradient {
@@ -28,8 +26,21 @@ body {
   }
 }
 .container {
-  background: #9abae1;
+display: flex;
+width: 100%;
+justify-content: center;
+text-shadow: 1px 1px 2px rgb(116, 80, 80), 0 0 25px rgb(92, 92, 202), 0 0 5px darkblue;
+
+
+}
+.card {
+  background: #3f3d56;
   border-radius: 15px;
+  width: 670px;
+  margin: 30px;
+  box-shadow: 1px 1px 2px rgb(116, 80, 80), 0 0 25px rgb(62, 62, 164), 0 0 5px darkblue;
+}
+.addImg img {
   width: 600px;
 }
 .quiz {
@@ -42,7 +53,7 @@ body {
   color: whitesmoke;
   font-size: 15px;
   padding: 5px;
-  background-color: #314f6f;
+  background-color: #9abae1;
 }
 h3 {
   padding: 5px;
@@ -52,7 +63,7 @@ h3 {
   margin-bottom: 35px;
   color: aliceblue;
 }
-input {
+input[name="answer"] {
   margin: 15px;
 }
 
@@ -60,11 +71,12 @@ label {
   font-size: 20px;
   color: aliceblue;
 }
+
 button {
   float: right;
   margin: 17px;
   width: 150px;
-  background-color: #314f6f;
+  background-color: #9abae1;
   border-radius: 15px;
   border: none;
   padding: 7px;
@@ -83,4 +95,35 @@ button:hover {
   font-size: 15px;
   margin: 10px;
   width: 70px;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 10px);
+  }
+  .card {
+    width: 240px;
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+  .addImg img {
+    width: 300px;
+  }
+  h3 {
+    padding: 5px;
+    margin: 10px;
+    font-size: 15px;
+  }
+  input {
+    margin: 5px;
+  }
+
+  label {
+    font-size: 10px;
+  }
+  .count {
+    font-size: 10px;
+    padding: 5px;
+  }
 }
