@@ -1,5 +1,6 @@
 let question = document.getElementById("question");
-let finishBtn = document.getElementById('finish')
+let finishBtn = document.getElementById('finish');
+let nextQuestion = document.getElementById("next");
 let allResult = []
 let currQues = 0;
 let isCheck = false;
@@ -35,6 +36,7 @@ function add(text) {
   }
   if (currQues==19) {
     finishBtn.style.display = 'block'
+    nextQuestion.style.display='none'
   }
 }
 function check(correctAnswer, selected) {
