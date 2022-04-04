@@ -20,6 +20,10 @@ function secTimer() {
 add(data[currQues]);
 
 function next() {
+  for (j = 0; j < 4; j++) {
+    ans1[j].style.backgroundColor = "#3f3d56";
+  }
+
   let radio = document.getElementsByTagName("input");
   for (let i = 0; i < radio.length; i++) {
     if (radio[i].checked == true) {
@@ -88,6 +92,16 @@ function check(correctAnswer, selected) {
     result.question = question.innerHTML;
   }
   allResult.push(result);
+}
+let ans = document.querySelectorAll("label");
+let ans1 = document.querySelectorAll(".answer");
+for (i = 0; i < ans.length; i++) {
+  ans[i].onclick = function () {
+    for (j = 0; j < 4; j++) {
+      ans1[j].style.backgroundColor = "#3f3d56";
+    }
+    ans1[this.getAttribute("for") - 1].style.backgroundColor = "#9abae1";
+  };
 }
 
 function finish() {
