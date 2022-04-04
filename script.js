@@ -2,20 +2,20 @@ let question = document.getElementById("question");
 let finishBtn = document.getElementById("finish");
 let nextQuestion = document.getElementById("next");
 let count = document.getElementById("count");
-let min = document.getElementById("min")
-let sec = document.getElementById("sec")
+let min = document.getElementById("min");
+let sec = document.getElementById("sec");
+let section= document.getElementById("section");
 let allResult = [];
 let currQues = 0;
 let isCheck = false;
-sec.innerHTML = "59"
-let timer = setInterval(secTimer,1000)
+sec.innerHTML = "59";
+let timer = setInterval(secTimer, 1000);
 function secTimer() {
-  sec.innerHTML -= 1
+  sec.innerHTML -= 1;
   if (sec.innerHTML == -1) {
-    min.innerHTML -= 1
-    sec.innerHTML = 59
+    min.innerHTML -= 1;
+    sec.innerHTML = 59;
   }
-
 }
 add(data[currQues]);
 
@@ -36,13 +36,16 @@ function next() {
     icon: "error",
     title: "Oops...",
     text: "Please select an answer!",
+    confirmButtonColor: "#3f3d56af",
+    
   });
 }
 
 function add(text) {
+  if (!text) return;  
   let countQue = currQues + 1;
   question.innerHTML = `Question${[countQue]}` + ":" + " " + text["question"];
-  count.innerHTML = "question :  " + " " + `${[countQue]}` + "/20";
+  count.innerHTML = "question :  " + " " + `${[countQue]}` + "/20" ;
   let input = document.getElementsByTagName("input");
   for (let i = 1; i <= 4; i++) {
     let label = document.getElementById(`answer${i}`);
@@ -51,8 +54,9 @@ function add(text) {
   }
   if (currQues === 4) {
     nextQuestion.innerHTML = "Next to IQ questions";
-  } else if (currQues === 8) {
-    nextQuestion.innerHTML = "Next to Technical questions";
+
+  } else if (currQues === 9) {
+    nextQuestion.innerHTML = "Next to Technical ";
   } else {
     nextQuestion.innerHTML = "Next";
   }
@@ -60,6 +64,15 @@ function add(text) {
     finishBtn.style.display = "block";
     nextQuestion.style.display = "none";
   }
+  if (currQues <= 4) {
+   section.innerHTML='English Quiz'
+  }
+    else if (currQues <= 9) {
+      section.innerHTML = "IQ Quiz";
+  }
+    else if(currQues <=19) {
+      section.innerHTML = "Technical Quiz";
+    }
 }
 function check(correctAnswer, selected) {
   let result = {
@@ -83,6 +96,6 @@ function check(correctAnswer, selected) {
 
 function finish() {
   next();
-  sessionStorage.setItem("result", JSON.stringify(allResult));
-  window.location.href=''
+  localStorage.setItem("result", JSON.stringify(allResult));
+
 }

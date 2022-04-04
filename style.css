@@ -26,16 +26,14 @@ body {
 }
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 38%);
+  grid-template-columns: repeat(2, 42%);
   width: 100%;
   justify-content: center;
-  text-shadow: 1px 1px 2px rgb(116, 80, 80), 0 0 25px rgb(92, 92, 202),
-    0 0 5px darkblue;
 }
 .card {
   background: #3f3d56af;
   border-radius: 15px;
-  width: 100%;
+  width: 90%;
   margin: 10%;
   box-shadow: 1px 1px 2px rgb(116, 80, 80), 0 0 25px rgb(62, 62, 164),
     0 0 5px darkblue;
@@ -44,16 +42,26 @@ body {
   width: 100%;
 }
 .quiz {
-  padding: 7%;
+  padding: 5%;
 }
+
 .count {
   display: block;
   border: 1px solid white;
   border-radius: 10px;
   color: whitesmoke;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #9abae1;
   text-align: center;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 10px;
+  padding: 5px;
+  border: none;
+}
+#section {
+  color: #3f3d56;
+  font-size: 25px;
 }
 h3 {
   padding: 5px;
@@ -92,32 +100,32 @@ label {
   margin: 10px;
   width: 30%;
 }
-.timer{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #9abae1;
-      width: 100px;
-      height: 50px;
-      border-radius: 50px;
-      margin: 10px;
-  }
-  .card .timer span{
-    color: white;
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9abae1;
+  width: 40%;
+  height: 50px;
+  border-radius: 50px;
+  margin: 10px;
 }
-
+.card .timer span {
+  color: white;
+}
 
 @media screen and (max-width: 480px) {
   .container {
     display: grid;
-    grid-template-columns: repeat(1, 100%);
+    grid-template-columns: repeat(1, 80%);
   }
   .card {
     width: 80%;
     margin-top: 50px;
   }
+
   .addImg img {
-    width:65%;
+    width: 65%;
     margin-left: 50px;
   }
   h3 {
@@ -137,14 +145,22 @@ label {
     font-size: 10px;
     margin-top: 40px;
   }
+  #section {
+  font-size: 15px;
 }
-@media screen and (max-width: 768px)and (min-width :480px) {
+.timer{
+  width: 20%;
+  height: 20px
+}
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
   .container {
     display: grid;
     grid-template-columns: repeat(1, 60%);
   }
   .addImg img {
-  display: none;
+    display: none;
   }
   .card {
     margin: 0;
