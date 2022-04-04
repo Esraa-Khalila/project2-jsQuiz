@@ -37,7 +37,7 @@ function next() {
     title: "Oops...",
     text: "Please select an answer!",
     confirmButtonColor: "#3f3d56af",
-    
+   
   });
 }
 

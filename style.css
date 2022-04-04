@@ -26,14 +26,16 @@ body {
 }
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 42%);
+  grid-template-columns: repeat(2, 38%);
   width: 100%;
   justify-content: center;
+  text-shadow: 1px 1px 2px rgb(116, 80, 80), 0 0 25px rgb(92, 92, 202),
+    0 0 5px darkblue;
 }
 .card {
   background: #3f3d56af;
   border-radius: 15px;
-  width: 90%;
+  width: 100%;
   margin: 10%;
   box-shadow: 1px 1px 2px rgb(116, 80, 80), 0 0 25px rgb(62, 62, 164),
     0 0 5px darkblue;
@@ -42,15 +44,14 @@ body {
   width: 100%;
 }
 .quiz {
-  padding: 5%;
+  padding: 7%;
 }
-
 .count {
   display: block;
   border: 1px solid white;
   border-radius: 10px;
   color: whitesmoke;
-  font-size: 18px;
+  font-size: 20px;
   background-color: #9abae1;
   text-align: center;
   display: grid;
@@ -58,10 +59,6 @@ body {
   gap: 10px;
   padding: 5px;
   border: none;
-}
-#section {
-  color: #3f3d56;
-  font-size: 25px;
 }
 h3 {
   padding: 5px;
@@ -73,13 +70,25 @@ h3 {
 }
 input[name="answer"] {
   margin: 15px;
+  appearance: none;
 }
 
 label {
   font-size: 20px;
   color: aliceblue;
+  width: 307px;
+  height: 20px;
+  margin-top: 6px;
 }
-
+.answer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3f3d56;
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 10px;
+}
 .btn {
   float: right;
   margin: 17px;
@@ -90,6 +99,7 @@ label {
   padding: 7px;
   color: beige;
   font-size: 15px;
+  
 }
 .btn:hover {
   cursor: pointer;
@@ -105,7 +115,7 @@ label {
   justify-content: center;
   align-items: center;
   background-color: #9abae1;
-  width: 40%;
+  width: 100px;
   height: 50px;
   border-radius: 50px;
   margin: 10px;
@@ -117,13 +127,12 @@ label {
 @media screen and (max-width: 480px) {
   .container {
     display: grid;
-    grid-template-columns: repeat(1, 80%);
+    grid-template-columns: repeat(1, 100%);
   }
   .card {
     width: 80%;
     margin-top: 50px;
   }
-
   .addImg img {
     width: 65%;
     margin-left: 50px;
@@ -141,19 +150,11 @@ label {
     font-size: 10px;
     padding: 5px;
   }
-  .btn {
+  button {
     font-size: 10px;
     margin-top: 40px;
   }
-  #section {
-  font-size: 15px;
 }
-.timer{
-  width: 20%;
-  height: 20px
-}
-}
-
 @media screen and (max-width: 768px) and (min-width: 480px) {
   .container {
     display: grid;
